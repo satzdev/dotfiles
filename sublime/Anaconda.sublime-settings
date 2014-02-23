@@ -1,0 +1,16 @@
+{
+  "jsonserver_debug": true,
+  "jsonserver_debug_port": 9999,
+  "suppress_word_completions": true,
+  "suppress_explicit_completions": true,
+  "complete_parameters": true,
+  "complete_all_parameters": true,
+  "display_signatures": true,
+  "anaconda_linting": true,
+  "anaconda_linting_behaviour": "always",
+  "anaconda_linter_delay": 0.5,
+  "anaconda_gutter_marks": true,
+  "anaconda_gutter_theme": "basic",
+  "anaconda_linter_mark_style": "outline",
+  "anaconda_linter_underlines": true
+}
