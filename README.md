@@ -1,14 +1,14 @@
 # Satz's dotfiles
 
 
-## overview of files
+## Overview of files
 
-#### bash
+#### Bash
 * `.bash_profile`
 * `.bashrc`
 * `.bash/*.sh` - os specific files
 
-#### sublime
+#### Sublime text 3
 * `*.sublime-settings`
 
 
