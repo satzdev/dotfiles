@@ -6,7 +6,7 @@
 #### Bash
 * `.bash_profile`
 * `.bashrc`
-* `.bash/*.sh` - os specific files
+* `.bash/*.sh` - os specific settings
 
 #### Sublime text 3
 * `*.sublime-settings`
