@@ -23,8 +23,8 @@ load_or_suggest() {
 
 # for learning. similar to 'set -x'
 _echo_exec() {
-  echo "\$ $@"
   "$@"
+  echo "\$ $@"
 }
 
 ## aliases and functions
@@ -35,6 +35,35 @@ alias ...='cd ../..'
 # list all files sorted by time.
 alias la='_echo_exec ls -AFhlrt'
 alias ld='ls -AFhlrt | grep "^d"'
+
+# taskwarrior
+t() {
+  _echo_exec task "$@"
+}
+ta() {
+  _echo_exec task add "$@"
+}
+tm() {
+  _echo_exec task "$1" mod "${@:2}"
+}
+tc() {
+  _echo_exec task config "$@"
+}
+tcp() {
+  _echo_exec task config default.project "$@"
+}
+td() {
+  _echo_exec task $1 done
+}
+ts() {
+  _echo_exec task $1 start
+}
+tsd() {
+  _echo_exec task show default."$@"
+}
+tcd() {
+  _echo_exec "task config default.$@"
+}
 
 mcd() {
   _echo_exec mkdir -p "$1" && _echo_exec cd "$1"
