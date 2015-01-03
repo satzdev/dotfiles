@@ -62,7 +62,7 @@ tsd() {
   _echo_exec task show default."$@"
 }
 tcd() {
-  _echo_exec "task config default.$@"
+  _echo_exec task config default."$@"
 }
 
 mcd() {
@@ -73,18 +73,14 @@ mcd() {
 alias fnd='_echo_exec find . -name'
 
 # copy with progress
-alias cpp='_echo_exec rsync -aPvW --human-readable --progress'
+alias cpwp='_echo_exec rsync -aPvW --human-readable --progress'
 
 ## git stuff
 ##
 alias gitlog='_echo_exec git log --all --decorate --graph --oneline'
 
 gitcommit() {
-  _echo_exec git add -A && _echo_exec git commit -m "$1"
-}
-
-gitpush() {
-  gitcommit "$1" && shift  && _echo_exec git push "$@"
+  _echo_exec git commit -am "$1"
 }
 
 # undo push
@@ -118,14 +114,11 @@ unset file
 ## variables
 ##
 [[ -d "${HOME}/bin" ]] || suggest 'mkdir ~/bin'
-PATH="/usr/local/bin:${HOME}/bin:${PATH}"
-if [[ -f "${HOME}/.nodebrew/nodebrew" ]]; then
-  PATH="${HOME}/.nodebrew/current/bin:${PATH}"
-else suggest 'curl -L git.io/nodebrew | perl - setup'
-fi
+PATH="${HOME}/bin:${PATH}"
 export PATH
 
 ## unset
 ##
 unset -f suggest
 unset -f load_or_suggest
+
