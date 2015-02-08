@@ -97,6 +97,8 @@ load_or_suggest "${HOME}/code/z/z.sh" \
 load_or_suggest '/usr/local/share/chruby/chruby.sh' \
   'install https://github.com/postmodern/chruby'
 load_or_suggest '/usr/local/share/chruby/auto.sh'
+load_or_suggest "${HOME}/git-completion.bash" \
+  'install https://github.com/git/git/blob/master/contrib/completion/git-completion.bash'
 
 ## load sub config files
 ##
