@@ -57,6 +57,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 
 NeoBundle 'Shougo/unite.vim'
+nnoremap <Space>u :Unite
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -70,6 +71,9 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/vimfiler'
+nnoremap <Space>e :VimFilerExplore -split -winwidth=30 -find -no-quit<CR>
+nnoremap <Space>f :VimFiler<CR>
 
 call neobundle#end()
 
