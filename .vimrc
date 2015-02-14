@@ -58,7 +58,8 @@ NeoBundle 'flazz/vim-colorschemes'
 
 NeoBundle 'Shougo/unite.vim'
 nnoremap <Space>u :Unite 
-nnoremap <Space>p :Unite file_rec/git
+nnoremap <Space>p :Unite file_rec/git<CR>
+nnoremap <Space>ub :Unite buffer<CR>
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kchmck/vim-coffee-script'
