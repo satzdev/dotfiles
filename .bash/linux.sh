@@ -14,3 +14,6 @@ alias desktop='cd ~/Desktop'
 alias documents='cd ~/Documents'
 alias pbcopy='xclip -select clipboard'
 alias pbpaste='xclip -select clipboard -o'
+
+# prompt
+PS1="\[\033[01;32m\]\u@\[\033[01;36m\] \w \$\[\033[00m\] "

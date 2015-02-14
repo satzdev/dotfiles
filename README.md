@@ -11,11 +11,14 @@
 #### Sublime text 3
 * `*.sublime-settings`
 
+#### Etc.
+* VIM - `.vimrc`
+* tmux - `.tmux.conf`
 
 ## Installation
 
 ```bash
-git clone https://github.com/satz/dotfiles.git
+git clone https://github.com/satzdev/dotfiles.git
 ```
 
 Copy files into specific directories.
