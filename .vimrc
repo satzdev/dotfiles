@@ -1,4 +1,3 @@
-syntax enable
 
 set exrc
 set number
@@ -21,8 +20,6 @@ set tabstop=2
 set shiftwidth=2
 set helplang=en
 
-colorscheme desert
-
 nnoremap <Space>w  :<C-u>w<CR>
 nnoremap <Space>q  :<C-u>q<CR>
 nnoremap <Space>Q  :<C-u>q!<CR>
@@ -43,7 +40,7 @@ autocmd FileType java,js,coffee,py,css,less,scss autocmd BufWritePre <buffer> :%
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
   if &compatible
-    set nocompatible               " Be iMproved
+    set nocompatible
   endif
 
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -63,10 +60,15 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kchmck/vim-coffee-script'
+
 NeoBundle 'bling/vim-airline'
+let g:airline_theme='hybrid'
+
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'scrooloose/syntastic'
 
 call neobundle#end()
 
@@ -74,3 +76,7 @@ filetype plugin indent on
 
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+syntax enable
+set background=dark
+colorscheme hybrid
