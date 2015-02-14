@@ -75,6 +75,15 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimfiler'
 nnoremap <Space>e :VimFilerExplore -split -winwidth=30 -find -no-quit<CR>
 nnoremap <Space>f :VimFiler<CR>
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 call neobundle#end()
 
