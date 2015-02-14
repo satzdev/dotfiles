@@ -62,6 +62,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kchmck/vim-coffee-script'
 
 NeoBundle 'bling/vim-airline'
+set laststatus=2
 let g:airline_theme='hybrid'
 
 NeoBundle 'tpope/vim-surround'
