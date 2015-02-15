@@ -31,7 +31,6 @@ vnoremap :  ;
 
 nnoremap <Space>h  ^
 nnoremap <Space>l  $
-
 nnoremap <Space>/  *<C-o>
 nnoremap g<Space>/ g*<C-o>
 
@@ -57,16 +56,26 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 
 NeoBundle 'Shougo/unite.vim'
-nnoremap <Space>u :Unite 
-nnoremap <Space>p :Unite file_rec/git<CR>
-nnoremap <Space>ub :Unite buffer<CR>
-NeoBundle 'scrooloose/nerdtree'
+let g:unite_source_history_yank_enable=1
+
+nmap     <Space>u [unite]
+nnoremap [unite]c :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]p :<C-u>Unite file_rec/git<CR>
+nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer file_mru<CR>
+nnoremap <silent> [unite]r :<C-u>Unite<Space>register<CR>
+nnoremap <silent> [unite]t :<C-u>Unite<Space>tab<CR>
+nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
+nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
+
+"NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kchmck/vim-coffee-script'
 
 NeoBundle 'bling/vim-airline'
 set laststatus=2
-let g:airline_theme='hybrid'
+let g:airline_theme='bubblegum'
 
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'mattn/emmet-vim'
@@ -96,4 +105,4 @@ NeoBundleCheck
 
 syntax enable
 set background=dark
-colorscheme hybrid
+colorscheme jellybeans
