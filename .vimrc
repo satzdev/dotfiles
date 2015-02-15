@@ -85,6 +85,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \    },
 \ }
+NeoBundle 'ujihisa/unite-colorscheme'
 
 call neobundle#end()
 
