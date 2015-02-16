@@ -13,7 +13,7 @@ set nowrapscan
 set ignorecase
 set smartcase
 set hidden
-set history=2000
+set history=5000
 set autoindent
 set expandtab
 set tabstop=2
@@ -22,12 +22,8 @@ set helplang=en
 
 nnoremap <Space>w  :<C-u>w<CR>
 nnoremap <Space>q  :<C-u>q<CR>
+nnoremap <Space>qa  :<C-u>qa<CR>
 nnoremap <Space>Q  :<C-u>q!<CR>
-
-nnoremap ;  :
-nnoremap :  ;
-vnoremap ;  :
-vnoremap :  ;
 
 nnoremap <Space>h  ^
 nnoremap <Space>l  $
@@ -105,4 +101,4 @@ NeoBundleCheck
 
 syntax enable
 set background=dark
-colorscheme jellybeans
+colorscheme molokai
