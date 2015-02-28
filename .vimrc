@@ -1,8 +1,9 @@
 
-set t_Co=256
+syntax enable
+
+set expandtab
 set exrc
 set number
-set ruler
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
 set incsearch
@@ -10,16 +11,22 @@ set hlsearch
 set nowrap
 set showmatch
 set whichwrap=h,l
-set nowrapscan
+set wrapscan
 set ignorecase
 set smartcase
 set hidden
 set history=5000
 set autoindent
-set expandtab
+set ruler
 set tabstop=2
 set shiftwidth=2
+set t_Co=256
 set helplang=en
+
+inoremap <silent> jj <ESC>
+inoremap <silent> <C-j> j
+inoremap <silent> kk <ESC>
+inoremap <silent> <C-k> k
 
 nnoremap <Space>w  :<C-u>w<CR>
 nnoremap <Space>q  :<C-u>q<CR>
@@ -47,6 +54,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'vim-scripts/Solarized'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
@@ -72,7 +80,6 @@ NeoBundle 'kchmck/vim-coffee-script'
 
 NeoBundle 'bling/vim-airline'
 set laststatus=2
-let g:airline_theme='bubblegum'
 
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'mattn/emmet-vim'
@@ -100,6 +107,6 @@ filetype plugin indent on
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
-syntax enable
+let g:solarized_termcolors=16
 set background=dark
-colorscheme molokai
+colorscheme solarized
