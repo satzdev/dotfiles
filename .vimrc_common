@@ -22,6 +22,7 @@ set tabstop=2
 set shiftwidth=2
 set t_Co=256
 set helplang=en
+set colorcolumn=79
 
 inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> j
