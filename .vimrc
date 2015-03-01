@@ -1,1 +1,1 @@
-so .vimrc_common
+so ~/.vimrc_common
