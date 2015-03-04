@@ -77,12 +77,14 @@ nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
 
 NeoBundle 'kchmck/vim-coffee-script'
 
-NeoBundle 'bling/vim-airline'
+NeoBundle 'itchyny/lightline.vim'
+let g:lightline = {
+\ 'colorscheme': 'solarized',
+\ }
 set laststatus=2
 
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimfiler'
@@ -97,7 +99,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \    },
 \ }
-NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'airblade/vim-gitgutter'
 let g:gitgutter_sign_removed_first_line = "^_"
