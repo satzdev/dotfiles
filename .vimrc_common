@@ -103,6 +103,9 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'airblade/vim-gitgutter'
 let g:gitgutter_sign_removed_first_line = "^_"
 
+NeoBundle 'jason0x43/vim-js-indent'
+NeoBundle 'w0ng/vim-hybrid'
+
 call neobundle#end()
 
 filetype plugin indent on
@@ -110,6 +113,5 @@ filetype plugin indent on
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
-"let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+colorscheme hybrid
